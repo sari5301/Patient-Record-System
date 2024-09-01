@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information</title>
+    <link rel="stylesheet" href="AC-patient-info.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Information</h1>
+        <form id="patientForm">
+            <h2>Patient Details</h2>
+            <label for="ward-number">Ward Number:</label>
+            <input type="text" id="ward-number" name="ward-number" required>
+
+            <label for="bed-number">Bed Number:</label>
+            <input type="text" id="bed-number" name="bed-number" required>
+
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="middle-name">Middle Name:</label>
+            <input type="text" id="middle-name" name="middle-name">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="contact-number">Contact Number:</label>
+            <input type="tel" id="contact-number" name="contact-number" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <h2>Admission Details</h2>
+            <label for="admission-date">Date of Admission:</label>
+            <input type="date" id="admission-date" name="admission-date" required>
+
+            <label for="admission-reason">Reason for Admission:</label>
+            <textarea id="admission-reason" name="admission-reason" required></textarea>
+
+            <h2>Emergency Contact</h2>
+            <label for="emergency-name">Name:</label>
+            <input type="text" id="emergency-name" name="emergency-name" required>
+
+            <label for="emergency-relationship">Relationship to Patient:</label>
+            <input type="text" id="emergency-relationship" name="emergency-relationship" required>
+
+            <label for="emergency-contact-number">Contact Number:</label>
+            <input type="tel" id="emergency-contact-number" name="emergency-contact-number" required>
+
+            <h2>Doctor's Information</h2>
+            <label for="doctor-name">Doctor-in-Charge:</label>
+            <input type="text" id="doctor-name" name="doctor-name" required>
+
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" name="specialization" required>
+
+            <label for="doctor-contact-number">Contact Number:</label>
+            <input type="tel" id="doctor-contact-number" name="doctor-contact-number" required>
+
+            <label for="last-consultation">Last Consultation:</label>
+            <input type="date" id="last-consultation" name="last-consultation" required>
+
+            <button type="submit">Save Information</button>
+        </form>
+    </div>
+    <script src="AC-patient-info.js"></script>
+</body>
+</html>
