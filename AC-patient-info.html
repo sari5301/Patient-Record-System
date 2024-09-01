@@ -3,81 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Information</title>
-    <link rel="stylesheet" href="AC-patient-info.css">
+    <title>Patient's Information System</title>
+    <link rel="stylesheet" href="AC.css">
+    <script src="AC-patient-info.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Patient Information</h1>
-        <form id="patientForm">
-            <h2>Patient Details</h2>
-            <label for="ward-number">Ward Number:</label>
-            <input type="text" id="ward-number" name="ward-number" required>
+    <h1>Patient's Information System</h1>
+    <form id="patient-form">
+        <fieldset>
+            <legend>Patient Information</legend>
+            <label for="wardNumber">Ward Number:</label>
+            <input type="text" id="wardNumber" name="wardNumber" required><br>
 
-            <label for="bed-number">Bed Number:</label>
-            <input type="text" id="bed-number" name="bed-number" required>
+            <label for="bedNumber">Bed Number:</label>
+            <input type="text" id="bedNumber" name="bedNumber" required><br>
 
-            <label for="first-name">First Name:</label>
-            <input type="text" id="first-name" name="first-name" required>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br>
 
-            <label for="last-name">Last Name:</label>
-            <input type="text" id="last-name" name="last-name" required>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br>
 
-            <label for="middle-name">Middle Name:</label>
-            <input type="text" id="middle-name" name="middle-name">
+            <label for="middleName">Middle Name:</label>
+            <input type="text" id="middleName" name="middleName"><br>
 
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
+            <input type="number" id="age" name="age" required><br>
 
-            <label for="dob">Date of Birth:</label>
-            <input type="date" id="dob" name="dob" required>
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" name="dateOfBirth" required><br>
 
             <label for="gender">Gender:</label>
             <select id="gender" name="gender" required>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
 
-            <label for="contact-number">Contact Number:</label>
-            <input type="tel" id="contact-number" name="contact-number" required>
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required><br>
 
             <label for="address">Address:</label>
-            <textarea id="address" name="address" required></textarea>
+            <textarea id="address" name="address" required></textarea><br>
 
-            <h2>Admission Details</h2>
-            <label for="admission-date">Date of Admission:</label>
-            <input type="date" id="admission-date" name="admission-date" required>
+            <label for="dateOfAdmission">Date of Admission:</label>
+            <input type="date" id="dateOfAdmission" name="dateOfAdmission" required><br>
 
-            <label for="admission-reason">Reason for Admission:</label>
-            <textarea id="admission-reason" name="admission-reason" required></textarea>
+            <label for="reasonForAdmission">Reason for Admission:</label>
+            <textarea id="reasonForAdmission" name="reasonForAdmission" required></textarea><br>
+        </fieldset>
 
-            <h2>Emergency Contact</h2>
-            <label for="emergency-name">Name:</label>
-            <input type="text" id="emergency-name" name="emergency-name" required>
+        <fieldset>
+            <legend>Emergency Contact</legend>
+            <label for="emergencyContactName">Name:</label>
+            <input type="text" id="emergencyContactName" name="emergencyContactName" required><br>
 
-            <label for="emergency-relationship">Relationship to Patient:</label>
-            <input type="text" id="emergency-relationship" name="emergency-relationship" required>
+            <label for="emergencyContactRelationship">Relationship to Patient:</label>
+            <input type="text" id="emergencyContactRelationship" name="emergencyContactRelationship" required><br>
 
-            <label for="emergency-contact-number">Contact Number:</label>
-            <input type="tel" id="emergency-contact-number" name="emergency-contact-number" required>
+            <label for="emergencyContactNumber">Contact Number:</label>
+            <input type="tel" id="emergencyContactNumber" name="emergencyContactNumber" required><br>
+        </fieldset>
 
-            <h2>Doctor's Information</h2>
-            <label for="doctor-name">Doctor-in-Charge:</label>
-            <input type="text" id="doctor-name" name="doctor-name" required>
+        <fieldset>
+            <legend>Doctor's Information</legend>
+            <label for="doctorInCharge">Doctor-in-Charge:</label>
+            <input type="text" id="doctorInCharge" name="doctorInCharge" required><br>
 
             <label for="specialization">Specialization:</label>
-            <input type="text" id="specialization" name="specialization" required>
+            <input type="text" id="specialization" name="specialization" required><br>
 
-            <label for="doctor-contact-number">Contact Number:</label>
-            <input type="tel" id="doctor-contact-number" name="doctor-contact-number" required>
+            <label for="doctorContactNumber">Contact Number:</label>
+            <input type="tel" id="doctorContactNumber" name="doctorContactNumber" required><br>
 
-            <label for="last-consultation">Last Consultation:</label>
-            <input type="date" id="last-consultation" name="last-consultation" required>
+            <label for="lastConsultation">Last Consultation:</label>
+            <input type="date" id="lastConsultation" name="lastConsultation" required><br>
+        </fieldset>
 
-            <button type="submit">Save Information</button>
-        </form>
-    </div>
-    <script src="AC-patient-info.js"></script>
+        <button type="submit">Add Patient</button>
+    </form>
+
+    <h2>Patient List</h2>
+    <ul id="patient-list"></ul>
 </body>
 </html>
